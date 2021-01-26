@@ -1,0 +1,91 @@
+
+<!-- section contact -->
+<section id="adduser" class="shadow-blue white-bg padding">
+    <h3 class="section-title">Edit Account</h3>
+    <div class="spacer" data-height="80"></div>
+
+    <div class="row">
+        
+        <div class="col-md-4 mb-4 mb-md-0">
+            <!-- contact info -->
+            <div class="contact-info mb-5">
+                <i class="icon-user"></i>
+                <div class="details">
+                    <h5>welcom <%= userDetail.firstName%></h5>
+                    <span>your dream</span>
+                </div>
+            </div>
+            <div class="contact-info mb-5">
+                <i class="icon-list"></i>
+                <div class="details">
+                    <h5>Email...</h5>
+                    <span>hello@bako.com</span>
+                </div>
+            </div>
+            <div class="contact-info">
+                <i class="icon-location-pin"></i>
+                <div class="details">
+                    <h5>Location</h5>
+                    <span>West Palm Beach, 4669 Travis Street</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <!-- Contact Form -->
+            <form id="contact-form" class="contact-form" method="post" action="/profile-user/edit-user">
+                <input type="hidden" name="id" id="id" value="<%= userDetail._id%>">
+                <div class="messages"></div>
+                
+                <div class="row">
+                    <div class="column col-md-6">
+                        <!-- First Name input -->
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="InputFirstName" id="InputFirstName" placeholder="First name" value="<%= userDetail.firstName%>" required="required" data-error="First Name is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="column col-md-6">
+                        <!-- Last Name input -->
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="InputLastName" name="InputLastName" placeholder="Last Name" value="<%= userDetail.lastName%>" required="required" data-error="Last Name is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="column col-md-12">
+                        <!-- Email input -->
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="InputEmail" name="InputEmail" placeholder="Email address" value="<%= userDetail.email%>" required="required" data-error="Email is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+            
+                    <div class="column col-md-6">
+                        <!-- password input -->
+                        <div class="form-group">
+                            <input type="password" class="form-control" name="InputPassword" id="InputPassword" placeholder="Password" value="<%= userDetail.password%>" required="required" data-error="Password is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="column col-md-6">
+                        <!-- password confirm input -->
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="InputPassword_Confirm" name="InputPassword_Confirm" placeholder="Password Confirm"  value="" required="required" data-error="Password Confirm is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" name="submit" id="submit" value="Submit" class="btn btn-default"><i class="icon-paper-plane"></i>Save</button><!-- Send Button -->
+
+            </form>
+            <!-- Contact Form end -->
+           
+        </div>
+        
+
+    </div>
+</section>

@@ -1,0 +1,36 @@
+<!-- add head link  -->
+<%- include('../layouts/head') %>
+
+<body>
+
+<!-- preloader -->
+<div id="preloader">
+	<div class="outer">
+		<div class="spinner">
+			<div class="dot1"></div>
+			<div class="dot2"></div>
+		</div>
+	</div>
+</div>
+
+<!-- site wrapper -->
+<div class="site-wrapper">
+	<!-- mobile header -->
+	<%- include('../layouts/mobile-header') %>
+
+	<!-- header -->
+	<header class="left float-left shadow-dark" id="header">
+		<%- include('left-bar') %>
+	</header>
+
+	<!-- main content area -->
+	<main class="content float-right">
+			<%- include(content) %>
+	</main>
+
+</div>
+
+<%- include('../layouts/footer')%>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+folder:
+    api
+    model
+        database
+    components
+        function xử lý dữ liệu 
+    router
+        router xử lý đường dẫn
+    view
+        file view FE
+    assets
+        css js images
+    storage
+        upload images / video / file
+setting up.
+1.  04/07/2020  nodemon --save-dev 
+                express --save 
+                body-parser
+
+
+database 
+    userAccounts
+        email 
+        email_verifitied 
+        password
+        firstName
+        lastName
+        active_yn
+        created_date
+        update_date
+    userDetails
+        firstName
+        lastName
+        birthday
+        address
+
+
+
